@@ -15,9 +15,9 @@ jobs:
 
       - name: Preparar archivos
         run: |
-          rm -rf build
-          mkdir build
+          mkdir -p build
           cp -r src/* build/
+          touch build/.nojekyll
 
       - name: Deploy a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
